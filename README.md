@@ -13,6 +13,10 @@ $ npm install
 $ npm install react-icons@4.11.0
 ```
 
+安装chart插件：
+```bash
+$ npm install recharts@2.9.0
+```
 
 
 
