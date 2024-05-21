@@ -4,7 +4,13 @@ import Chart from '@/app/ui/dashboard/chart/chart'
 import Rightbar from '@/app/ui/dashboard/rightbar/rightbar'
 import Transactions from '../ui/dashboard/transactions/transactions'
 
+
+
 export default function DashboardPage() {
+
+    
+
+   
     return (
         <div className={styles.wrapper}>
             <div className={styles.main}>
@@ -19,6 +25,7 @@ export default function DashboardPage() {
             <div className={styles.side}>
                 <Rightbar />
             </div>
+            
         </div>
     )
 }

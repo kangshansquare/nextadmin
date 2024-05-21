@@ -50,6 +50,10 @@ const data = [
 
 
 export default function ChartPage() {
+
+    
+
+
     return (
         <div className={styles.container}>
             <h2 className={styles.title}>Weekly Recap</h2>
