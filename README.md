@@ -294,7 +294,10 @@ module.exports = nextConfig
 
 
 
-- 搜索框
+## 搜索框
+1.在url上，显示用户输入信息，比如，http://example.com/dashboard？q=xxx
+
+
 随着用户输入执行搜索的搜索框，需要等待用户完成输入（或一定时间内用户没有再输入）再进行搜索，避免频繁发送请求，给服务器带来压力。使用`use-debounce`库
 
 ```
