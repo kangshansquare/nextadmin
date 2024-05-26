@@ -305,6 +305,46 @@ $ npm install use-debounce@9.0.4
 ```
 
 
+## Server Actions
+```javascript
+# app/test/page.jsx
+export default async function TestPage() {
+    
+    const handleForm = async (data) => {
+        "use server"
+        console.log(data)
+    }
+    
+
+    return (
+        <form action={handleForm}>
+            <input type="text" name="username" />
+            <button>Send</button>
+        </form>
+    )
+}
+
+// 输出
+FormData {
+  [Symbol(state)]: [
+    {
+      name: '$ACTION_ID_f22954f4aec9e1904b58cb1665c29d747695e0e3',
+      value: ''
+    },
+    { name: 'username', value: 'test' }
+  ]
+}
+
+// 用户input输入的值
+const username = data.get("username")
+```
+
+## 加密
+对用户密码进行哈希保存。安装`bcrypt`:
+```shell
+$ npm install bcrypt@5.1.1
+```
+
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

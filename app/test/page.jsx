@@ -1,13 +1,17 @@
-export default async function Test() {
-    const data = await getVersion();
-    console.log(data)
-    return (
-        <h1>Test</h1>
-    )
-}
+export default async function TestPage() {
+    
+    const handleForm = async (data) => {
+        "use server"
+        console.log(data)
+        const username = data.get("username")
+        console.log(username)
+    }
+    
 
-export const getVersion = async () => {
-    const res = await fetch("http://192.168.56.101:8848/nacos/v1/console/server/state")
-    const data = await res.json();
-    return data
+    return (
+        <form action={handleForm}>
+            <input type="text" name="username" />
+            <button>Send</button>
+        </form>
+    )
 }
